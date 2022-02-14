@@ -9,34 +9,64 @@
         }
      </style>
      <body style="background-color:lightblue;">
-         <!--<div style="text-align:center;">-->
-            <!--<h1> Enquete de pesquisa </h1> -->
-         <!--</div>-->
-         <!--<div style="margin-left:100px;margin-top:100px">-->
-            <!--<form action="https://formspree.io/f/xrgjqbyv" method="POST">-->
-                 <!--<input type="email" name="_replyto"></form>-->
-                 <!--<div class="slidecontainer">-->
-                   <!--<input name="slider1" type="range" min="1" max="10" value="1" class="slider">-->
-                 <!--</div>-->
-                 <!--<div class="slidecontainer">-->
-                   <!--<input name="slider2" type="range" min="1" max="10" value="1" class="slider">-->
-                 <!--</div>-->
-                 <!--<button type="submit"> Send</button>-->
-             <!--</form>-->
-         <!--</div>-->
+         <h1 style='text-align:center'> Pesquisa </h1>
         <form
+          style="margin-left:50px"
           action="https://formspree.io/f/xrgjqbyv"
           method="POST"
         >
-          <label>
-            Your email:
+          <div style="margin-bottom:30px">
+            Seu e-mail:
             <input type="email" name="email">
-          </label>
+          </div>
          <div class="slidecontainer">
-           <input name="slider1" type="range" min="1" max="10" value="1" class="slider">
+           <input id="slider1" name="slider1" type="range" min="0" max="9" value="5" class="slider">
+           <img id="slider1_img" src="img/5.png" alt="">
          </div>
-          <!-- your other form fields go here -->
+
+         <div class="slidecontainer">
+           <input id="slider2" name="slider2" type="range" min="0" max="9" value="5" class="slider">
+           <img id="slider2_img" src="img/5.png" alt="">
+         </div>
+
+         <div class="slidecontainer">
+           <input id="slider3" name="slider3" type="range" min="0" max="9" value="5" class="slider">
+           <img id="slider3_img" src="img/5.png" alt="">
+         </div>
+
           <button type="submit">Send</button>
+<script> 
+    //for (let i = 1; i < 4; i++){
+    //    var element_id;
+    //    var slider_img_id;
+    //    var rangeslider;
+    //    var slider_img;
+    //   element_id = "slider" + String(i);
+    //   slider_img_id = "slider" + String(i) + "_img";
+    //   rangeslider = document.getElementById(element_id); 
+    //   slider_img = document.getElementById(slider_img_id); 
+    //   rangeslider.oninput = function() { 
+    //       slider_img.src = "img/" + String(rangeslider.value) + ".png"
+    //}
+    //    }
+
+   var rangeslider1 = document.getElementById("slider1"); 
+   var slider_img1 = document.getElementById("slider1_img"); 
+    rangeslider1.addEventListener('input', function() {
+       slider_img1.src = "img/" + String(rangeslider1.value) + ".png"
+  } )
+   var rangeslider2 = document.getElementById("slider2"); 
+   var slider_img2 = document.getElementById("slider2_img"); 
+    rangeslider2.addEventListener('input', function() {
+       slider_img2.src = "img/" + String(rangeslider2.value) + ".png"
+  } )
+   var rangeslider3 = document.getElementById("slider3"); 
+   var slider_img3 = document.getElementById("slider3_img"); 
+    rangeslider3.addEventListener('input', function() {
+       slider_img3.src = "img/" + String(rangeslider3.value) + ".png"
+  } )
+</script> 
         </form>
      </body>
 </html>
+
